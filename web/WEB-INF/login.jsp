@@ -12,6 +12,8 @@
         <title>Login</title>
     </head>
     <body>
+        <h1>Login</h1>
+        <br>
 <form method="post">
         <label for="title">Username: </label>
         <input type="text" name="username" value="${username}">
@@ -21,7 +23,7 @@
         <br>
         <input type="submit" name="login" value="login">
         <br>
-        
+        <br>
         ${displayMessage}
 </form>
     </body>

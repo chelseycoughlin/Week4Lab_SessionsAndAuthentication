@@ -12,14 +12,10 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Welcome!</h1>
-        <br>
+        <h1>Home Page</h1>
 
-            <p>Hello ${username}</p>
-        <br>
-        <br>
+            <h3>Hello ${username}.</h3>
         <a href="login?logout" value="logout" name="logout">Logout</a>
         <br>
-        ${displayMessage}
     </body>
 </html>
