@@ -14,11 +14,12 @@
     <body>
         <h1>Welcome!</h1>
         <br>
-        <form method="post" action="note">
-        <label>Hello ${username}: </label>
+
+            <p>Hello ${username}</p>
         <br>
         <br>
-        <a href="session?logout" value="logout" name="logout">Logout</a>
-        </form>
+        <a href="login?logout" value="logout" name="logout">Logout</a>
+        <br>
+        ${displayMessage}
     </body>
 </html>

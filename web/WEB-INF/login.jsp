@@ -12,17 +12,17 @@
         <title>Login</title>
     </head>
     <body>
-        <form method="post" action="home">
+<form method="post">
         <label for="title">Username: </label>
         <input type="text" name="username" value="${username}">
         <br>
         <label for="title">Password: </label>
         <input type="text" name="password" value="${password}">
         <br>
-        <input type="submit" name="Login" value="login">
+        <input type="submit" name="login" value="login">
         <br>
-        <p name="message"></p>
-        </form>
         
+        ${displayMessage}
+</form>
     </body>
 </html>
