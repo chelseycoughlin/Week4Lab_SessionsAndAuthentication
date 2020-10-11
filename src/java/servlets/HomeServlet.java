@@ -23,14 +23,8 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
         
-        String username = (String) session.getAttribute("username");
-        String logout = request.getParameter("logout");
-        
-        
-        request.setAttribute("username", username);
-        getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
     }
         
 
@@ -38,14 +32,7 @@ public class HomeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        HttpSession session = request.getSession();
-        
-        String username = (String) session.getAttribute("username");
-        
-        
-        request.setAttribute("username", username);
-        
-        getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
+
     }
 
 }

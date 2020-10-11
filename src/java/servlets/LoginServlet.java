@@ -42,12 +42,8 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/home.jsp")
                     .forward(request, response);
         }
-        else if (username == null || password == null) {
-            request.getRequestDispatcher("/WEB-INF/login.jsp")
-                    .forward(request, response);
-        }
         
-        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+       getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response); 
     }
 
     @Override
@@ -66,17 +62,13 @@ public class LoginServlet extends HttpServlet {
             if (userService.login(username, password) != null) {
                 
                 session.setAttribute("username", username);
-                request.getRequestDispatcher("/WEB-INF/home.jsp")
-                        .forward(request, response);
+                response.sendRedirect(response.encodeRedirectURL("home"));
             } else {
                 
                 request.setAttribute("displayMessage", "Invalid username or password");
                 request.getRequestDispatcher("/WEB-INF/login.jsp")
                         .forward(request, response);
             }
-
-        
-    //getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
     }
 
 }
